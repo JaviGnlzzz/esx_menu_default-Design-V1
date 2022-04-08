@@ -1,0 +1,194 @@
+@font-face{
+	font-family: BoxedRound;
+	src: url("https://cdn.discordapp.com/attachments/886714318471712798/896824121164451900/BoxedRound.ttf");
+}
+
+html{
+	transform: scale(0.95);
+}
+*{
+	overflow: hidden;
+}
+.pos {
+	position: relative;
+	bottom: 15px;
+}
+hr{
+	border: none;
+	background: white;
+	box-shadow: 0px 0px 5px white;
+	width: 300px;
+	height: 0.5px;
+}
+.menu{
+	margin-bottom: 5%;
+	/* transform: perspective(2000px) rotate3d(0, 1, 0, -25deg); */
+	font-family: BoxedRound;
+	font-weight: bold;
+	min-width: 340px;
+	color: rgb(255, 255, 255);
+	position: absolute;
+	padding: 1%;
+	border-radius:5px;
+}
+.head{
+	display: flex;
+	text-align: left;
+	overflow: hidden;
+	white-space: nowrap;
+	background-color: rgb(255, 0, 0);
+}
+.menu .head{
+	font-family: BoxedRound;
+	text-shadow: 0px 0px 5px white;
+	padding-left: 15px;
+	padding-top: 8px;
+	text-align: center;
+	height: 50px;
+	color: #ffffff;
+	font-weight: normal;
+	font-size: 1.4rem;
+	background: #000000;
+	border-left: 0.2vw solid white;
+	border-right: 0.2vw solid white;
+	border-radius: 3px;
+}
+
+
+#icono{
+	margin-right: 6%;
+}
+
+.menu .menu-items{
+	font-family: BoxedRound;
+	margin-top: 1.5%;
+	max-height: 545px;
+	overflow-y: auto;
+	/* font-weight: 800; */
+}
+.menu .menu-items .menu-item{
+	font-family: BoxedRound;
+	display: block;
+	padding: 10px;
+	font-size: 14px;
+	text-align: left;
+	text-indent: 5px;
+	background: black;
+	color: #fdfdfd;
+    border-radius: 3px;
+	border: 2px solid #35353500;
+}
+.menu .menu-items .menu-item.selected{
+	background: #ffffff;
+	box-shadow: -1px 0 10px #000000;
+    border-radius: 3px;
+	color: #000000;
+	border-right: .2vw solid #000000;
+	border-left: .2vw solid #000000;
+	padding-left: 15px;
+	/**animation: fadeIn 0.0s;**/
+	/**animation: bigSelected 1.0s;**/
+	animation: wave 0.5s linear forwards;
+}
+.head > span{
+	position: relative;
+	display: inline-block;
+}
+.head > span::before, .head > span::after{
+	content: "";
+	position: absolute;
+	top: 10%;
+	width: 9999px;
+	height: 0.7px;
+	background: #ffffff;
+}
+.head > span::before{
+	right: 105%;
+	margin-right: 15px;
+}
+.head > span::after{
+	left: 105%;
+	margin-left: 15px;
+}
+.align-left,
+.align-right,
+.align-top-left,
+.align-top-right,
+.align-bottom-left,
+.align-bottom,
+.align-center,
+.align-bottom-right{
+	position: absolute;
+	bottom: 5%;
+	right: 0%;
+}
+::-webkit-scrollbar{
+	width: 8px;
+	border-left: 4px solid #27273300;
+}
+::-webkit-scrollbar-track{
+	background: #27273300;
+	border-left: 4px solid #27273300;
+}
+::-webkit-scrollbar-thumb{
+	background: #1a242d00;
+	border-left: 4px solid #27273300;
+}
+::-webkit-scrollbar-thumb:hover{
+	background: #1a242d00;
+	border-left: 4px solid #27273300;
+}
+@keyframes fadeIn{
+	0%{
+		transform: scale(0) translateX(-50rem);
+		opacity:0;
+   }
+   50%{
+	   opacity: 0.3;
+   }
+   80%{
+	   opacity: 0.5;
+	   transform: scale(1.03);
+   }
+	100%{
+		opacity:1;
+		transform: scale(1);
+   }
+}
+
+@keyframes wave {
+  0%,40%,100% {
+    transform: translateY(0)
+  }
+  20% {
+    transform: translateY(-10px)
+  }
+}
+
+.footer-items  {
+	font-family: BoxedRound;
+	color: rgb(255, 255, 255);
+	display: flex;
+	justify-content: space-between;
+	margin-top: 10px;
+	margin-left: 15%;
+    text-align: center;
+}
+#boton1{
+	font-family: BoxedRound;
+	font-size: 15px;
+	background: #000000;
+	color: white;
+	border: 1px solid rgba(255, 255, 255, 0);
+	border-radius: 3px;
+	text-align: center;
+}
+#boton2{
+	font-family: BoxedRound;
+	font-size: 15px;
+	background: #000000;
+	color: white;
+	border: 1px solid rgba(255, 255, 255, 0);
+	border-radius: 3px;
+	text-align: center;
+}
